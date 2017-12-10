@@ -1,0 +1,102 @@
+2017-12-09 11:45:22,328 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2017-12-09 11:45:26,361 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-12-09 11:45:26,589 INFO  [org.jboss.as] (MSC service thread 1-6) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2017-12-09 11:45:26,591 DEBUG [org.jboss.as.config] (MSC service thread 1-6) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1252
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jre1.8.0_121\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jre1.8.0_121\lib\ext;C:\Windows\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jre1.8.0_121
+	java.io.tmpdir = C:\Users\ADMINI~2\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jre1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;native;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jre1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Users\Administrator\Desktop\eclipseNeon-drools\eclipse;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_121-b13
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_121
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.121-b13
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.bind.address.management = localhost
+	jboss.home.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final
+	jboss.host.name = win-vg05263epl8
+	jboss.modules.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = win-vg05263epl8
+	jboss.qualified.host.name = win-vg05263epl8
+	jboss.server.base.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone
+	jboss.server.config.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone\configuration
+	jboss.server.data.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone\data
+	jboss.server.deploy.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone\data\content
+	jboss.server.log.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone\log
+	jboss.server.name = win-vg05263epl8
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:/C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/standalone/configuration/logging.properties
+	module.path = C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/modules
+	org.jboss.boot.log.file = C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/standalone/log/boot.log
+	org.jboss.logmanager.nocolor = true
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 7
+	os.version = 6.1
+	path.separator = ;
+	program.name = JBossTools: WildFly 10.x
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jre1.8.0_121\lib\resources.jar;C:\Program Files\Java\jre1.8.0_121\lib\rt.jar;C:\Program Files\Java\jre1.8.0_121\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_121\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_121\lib\jce.jar;C:\Program Files\Java\jre1.8.0_121\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_121\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_121\classes
+	sun.boot.library.path = C:\Program Files\Java\jre1.8.0_121\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/modules org.jboss.as.standalone -b localhost --server-config=standalone.xml -Djboss.server.base.dir=C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\standalone
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1252
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = Service Pack 1
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = ES
+	user.dir = C:\Users\Administrator\Desktop\eclipseNeon-drools\Wildfly10\wildfly-10.1.0.Final\bin
+	user.home = C:\Users\Administrator
+	user.language = es
+	user.name = Administrador
+	user.script = 
+	user.timezone = America/Bogota
+	user.variant = 
+2017-12-09 11:45:26,592 DEBUG [org.jboss.as.config] (MSC service thread 1-6) VM Arguments: -Dprogram.name=JBossTools: WildFly 10.x -Xms64m -Xmx512m -Dorg.jboss.resolver.warning=true -Djava.net.preferIPv4Stack=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/standalone/log/boot.log -Dlogging.configuration=file:/C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final/standalone/configuration/logging.properties -Djboss.home.dir=C:/Users/Administrator/Desktop/eclipseNeon-drools/Wildfly10/wildfly-10.1.0.Final -Dorg.jboss.logmanager.nocolor=true -Djboss.bind.address.management=localhost -Dfile.encoding=Cp1252 
+2017-12-09 11:46:04,668 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) WFLYDS0004: Found VideoAndes.war in deployment directory. To trigger deployment create a file called VideoAndes.war.dodeploy
+2017-12-09 11:46:04,911 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-12-09 11:46:05,248 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.4.0.Final
+2017-12-09 11:46:05,255 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.4.0.Final
