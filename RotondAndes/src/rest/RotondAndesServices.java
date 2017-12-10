@@ -240,6 +240,20 @@ public class RotondAndesServices {
 		}
 		return Response.status(200).entity(bClientes).build();
 	}
+	@DELETE
+	@Path("/eliminarRestaurante/{nombreRestaurante}")
+	@Produces({ MediaType.APPLICATION_JSON })
+	public void eliminarRestaurante(@PathParam("nombreRestaurante") String nombreRestaurante) {
+
+		RotondAndesTM tm = new RotondAndesTM(getPath());
+		
+		try {
+			tm.eliminarRestaurante(nombreRestaurante);
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		
+	}
 
 
 

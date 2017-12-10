@@ -11,7 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
-
+import dao.DAOEliminarRestaurante;
 import dao.DAOProductoMasVendido;
 import dao.DAOProductoMenosVendido;
 import dao.DAORestauranteMasFrecuentado;
@@ -2815,6 +2815,36 @@ public class RotondAndesTM {
 				throw exception;
 			}
 		}
+	}
+	
+	public void eliminarRestaurante(String nombre) throws SQLException {
+		DAOEliminarRestaurante daoEliminarRestaurante = new DAOEliminarRestaurante();
+		try {
+			////// transaccion
+			this.conn = darConexion();
+			daoEliminarRestaurante.setConn(conn);
+			daoEliminarRestaurante.eliminarRestaurante(nombre);
+
+		} catch (SQLException e) {
+			System.err.println("SQLException:" + e.getMessage());
+			e.printStackTrace();
+			throw e;
+		} catch (Exception e) {
+			System.err.println("GeneralException:" + e.getMessage());
+			e.printStackTrace();
+			throw e;
+		} finally {
+			try {
+				daoEliminarRestaurante.cerrarRecursos();
+				if (this.conn != null)
+					this.conn.close();
+			} catch (SQLException exception) {
+				System.err.println("SQLException closing resources:" + exception.getMessage());
+				exception.printStackTrace();
+				throw exception;
+			}
+		}
+		
 	}
 	
 
