@@ -43,11 +43,13 @@ import vos.Asistente;
 import vos.EquivalenciasIngredientes;
 import vos.EquivalenciasProductos;
 import vos.ListaProductos;
+import vos.ListaRentabilidad;
 import vos.Menu;
 import vos.OfrecerProductos;
 import vos.Organizador;
 import vos.Pedido;
 import vos.Registrado;
+import vos.Rentabilidad;
 import vos.Producto;
 import vos.ProductoMasVendido;
 import vos.ProductoMenosVendido;
@@ -2818,7 +2820,59 @@ public class RotondAndesTM {
 	}
 	
 
+	///////////////////////////
+	////Rentabilidad//////////
+	public List<Rentabilidad> darRentabilidadLocal(String fecha1, String fecha2, String restaurante) throws Exception {
+		List<Rentabilidad> productos;
+		DAORotondAndes daoProductos = new DAORotondAndes();
+
+		try {
+			////// transaccion
+			this.conn = darConexion();
+			daoProductos.setConn(conn);
+			productos = daoProductos.darRentabilidadRestaurante(fecha1, fecha2, restaurante);
+
+		} catch (SQLException e) {
+			System.err.println("SQLException:" + e.getMessage());
+			e.printStackTrace();
+			throw e;
+		} catch (Exception e) {
+			System.err.println("GeneralException:" + e.getMessage());
+			e.printStackTrace();
+			throw e;
+		} finally {
+			try {
+				daoProductos.cerrarRecursos();
+				if (this.conn != null)
+					this.conn.close();
+			} catch (SQLException exception) {
+				System.err.println("SQLException closing resources:" + exception.getMessage());
+				exception.printStackTrace();
+				throw exception;
+			}
+		}
+		return productos;
+	}
 	
+	public ListaRentabilidad darRentabilidad(String fecha1, String fecha2, String restaurante) throws Exception {
+		ListaRentabilidad remL = new ListaRentabilidad(darRentabilidadLocal(fecha1, fecha2, restaurante));
+		try
+		{
+			ListaRentabilidad resp = dtm.getRemoteRentabilidad();
+			
+			System.out.println(resp.getRentabilidades().size());
+			remL.getRentabilidades().addAll(resp.getRentabilidades() );
+		}
+		catch(NonReplyException e)
+		{
+			e.printStackTrace();
+		}catch (Exception e) {
+			System.out.println("Entro en error");
+			e.printStackTrace();
+		}
+		return remL;
+		
+	}
 	
 	
 

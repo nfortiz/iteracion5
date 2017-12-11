@@ -19,6 +19,8 @@ import javax.ws.rs.core.Response;
 import tm.RotondAndesTM;
 import tm.RotondAndesTM;
 import vos.Asistente;
+import vos.ListaProductos;
+import vos.ListaRentabilidad;
 import vos.Organizador;
 import vos.Producto;
 import vos.ProductoMasVendido;
@@ -66,6 +68,21 @@ public class RotondAndesServices {
 	public Response getRestaurantes() {
 		// TODO: Terminar metod
 		return null;
+	}
+	
+	
+	@GET
+	@Path("{rentabilidad}")
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getRentabilidadRestaurante(@QueryParam("fecha1")String fecha1,@QueryParam("idRestaurante") String fecha2, @QueryParam("idRestaurante")String restaurante) {
+		RotondAndesTM tm = new RotondAndesTM(getPath());
+		ListaRentabilidad productos;
+		try {
+			productos = tm.darProductos();
+		} catch (Exception e) {
+			return Response.status(500).entity(doErrorMessage(e)).build();
+		}
+		return Response.status(200).entity(productos).build();
 	}
 
 	/**

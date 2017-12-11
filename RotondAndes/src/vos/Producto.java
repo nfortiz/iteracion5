@@ -18,7 +18,19 @@ public class Producto {
 
 	@JsonProperty(value = "tiempoPreparacion")
 	private String tiempoPreparacion;
-
+	
+	public Producto(@JsonProperty(value = "nombre") String nombre,			 
+			@JsonProperty(value = "descripcion") String descripcionEspaniol,
+			@JsonProperty(value = "traduccion") String descripcionIngles,			
+			@JsonProperty(value = "tiempoPreparacion") String tiempoPreparacion) {
+		super();
+		this.nombre = nombre;
+		this.descripcion = descripcionEspaniol;
+		this.traduccion = descripcionIngles;
+		
+		this.tiempoPreparacion = tiempoPreparacion;
+		
+	}
 	
 
 	public Producto(@JsonProperty(value = "nombre") String nombre,
@@ -37,20 +49,7 @@ public class Producto {
 		this.tiempoPreparacion = tiempoPreparacion;
 		
 	}
-	public Producto(@JsonProperty(value = "nombre") String nombre,
-			 
-			@JsonProperty(value = "descripcion") String descripcionEspaniol,
-			@JsonProperty(value = "traduccion") String descripcionIngles,
-			
-			@JsonProperty(value = "tiempoPreparacion") String tiempoPreparacion) {
-		super();
-		this.nombre = nombre;
-		this.descripcion = descripcionEspaniol;
-		this.traduccion = descripcionIngles;
-		
-		this.tiempoPreparacion = tiempoPreparacion;
-		
-	}
+
 
 
 	public String getNombre() {

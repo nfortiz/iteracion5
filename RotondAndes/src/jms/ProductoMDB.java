@@ -91,13 +91,11 @@ public class ProductoMDB implements MessageListener, ExceptionListener
 	
 	public ListaProductos getRemoteProductos() throws JsonGenerationException, JsonMappingException, JMSException, IOException, NonReplyException, InterruptedException, NoSuchAlgorithmException
 	{
-		System.out.println("Se va a enviar el mensaje de la peticion 1");
 		answer.clear();
 		String id = APP+""+System.currentTimeMillis();
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		id = DatatypeConverter.printHexBinary(md.digest(id.getBytes())).substring(0, 8);
 //		id = new String(md.digest(id.getBytes()));
-		System.out.println("Se va a enviar el mensaje de la peticion");
 		sendMessage("", REQUEST, globalTopic, id);
 		boolean waiting = true;
 
@@ -117,6 +115,8 @@ public class ProductoMDB implements MessageListener, ExceptionListener
 		if(answer.isEmpty())
 			throw new NonReplyException("Non Response");
 		ListaProductos res = new ListaProductos(answer);
+		System.out.println("Tamanio de respuesta :: "+res.getProductos().size());
+
         return res;
 	}
 	

@@ -61,5 +61,33 @@ public class DAORotondAndes {
 	}
 
 	// ________________________________________________________________
+	
+	public ArrayList<Rentabilidad> darRentabilidadRestaurante(String fecha1, String fecha2, String restaurante) throws SQLException, Exception {
+		ArrayList<Rentabilidad> productos = new ArrayList<Rentabilidad>();
+
+		String sql = "select sum(ofp.precioventa) as valortotal,count(ofp.precioventa) as productosvendidos, ofp.PRODUCTO_NOMBRE"+
+					" from (pedido ped inner join PEDIDO_PRODUCTO pedp on ped.ID=pedp.PEDIDO_ID)inner join OFRECER_PRODUCTO ofp "+
+					"on pedp.OFRECER_PRODUCTO_NOMBRE = ofp.PRODUCTO_NOMBRE where fecha between"+
+					" '"+fecha1+"' and '"+fecha2+"'  and ofp.RESTAURANTE_NOMBRE='"+restaurante+"' group by(ofp.PRODUCTO_NOMBRE)";
+
+
+		PreparedStatement prepStmt = conn.prepareStatement(sql);
+		recursos.add(prepStmt);
+		ResultSet rs = prepStmt.executeQuery();
+		int n =0;
+		while (rs.next()&&n<100) {
+			String nombre = rs.getString("nombre");
+			String clasificacion = rs.getString("clasificacion");
+			String descripcionEspaniol = rs.getString("descripcionEspaniol");
+			String descripcionIngles = rs.getString("descripcionIngles");
+			Double costoProduccion = Double.parseDouble(rs.getString("costoProducto"));
+
+			String tiempoPreparacion = rs.getString("tiempoPreparacion");
+
+			productos.add(new Rentabilidad("dss",2,3));
+			n++;
+		}
+		return productos;
+	}
 
 }

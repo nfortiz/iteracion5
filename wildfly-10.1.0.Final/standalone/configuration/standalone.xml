@@ -344,6 +344,46 @@
                         <property name="destinationName" value="app3"/>
                     </environment>
                 </object-factory>
+                <object-factory name="java:global/RMQTopicPedido" module="com.rabbitmq" class="com.rabbitmq.jms.admin.RMQObjectFactory">
+                    <environment>
+                        <property name="className" value="javax.jms.Topic"/>
+                        <property name="amqp" value="true"/>
+                        <property name="amqpExchangeName" value="pedido.test"/>
+                        <property name="amqpRoutingKey" value="pedido.general"/>
+                        <property name="amqpQueueName" value="app3"/>
+                        <property name="destinationName" value="app3"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/RMQPedidoLocal" module="com.rabbitmq" class="com.rabbitmq.jms.admin.RMQObjectFactory">
+                    <environment>
+                        <property name="className" value="javax.jms.Topic"/>
+                        <property name="amqp" value="true"/>
+                        <property name="amqpExchangeName" value="pedido.test"/>
+                        <property name="amqpRoutingKey" value="pedido.general.app3"/>
+                        <property name="amqpQueueName" value="app3"/>
+                        <property name="destinationName" value="app3"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/RMQTopicRentabilidad" module="com.rabbitmq" class="com.rabbitmq.jms.admin.RMQObjectFactory">
+                    <environment>
+                        <property name="className" value="javax.jms.Topic"/>
+                        <property name="amqp" value="true"/>
+                        <property name="amqpExchangeName" value="rentabilidad.test"/>
+                        <property name="amqpRoutingKey" value="rentabilidad.general"/>
+                        <property name="amqpQueueName" value="app3"/>
+                        <property name="destinationName" value="app3"/>
+                    </environment>
+                </object-factory>
+                <object-factory name="java:global/RMQRentabilidadLocal" module="com.rabbitmq" class="com.rabbitmq.jms.admin.RMQObjectFactory">
+                    <environment>
+                        <property name="className" value="javax.jms.Topic"/>
+                        <property name="amqp" value="true"/>
+                        <property name="amqpExchangeName" value="rentabilidad.test"/>
+                        <property name="amqpRoutingKey" value="rentabilidad.general.app3"/>
+                        <property name="amqpQueueName" value="app3"/>
+                        <property name="destinationName" value="app3"/>
+                    </environment>
+                </object-factory>
                            </bindings>
             <remote-naming/>
         </subsystem>

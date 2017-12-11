@@ -24,8 +24,10 @@ import com.rabbitmq.jms.admin.RMQDestination;
 
 import jms.NonReplyException;
 import jms.ProductoMDB;
+import jms.RentabilidadMDB;
 import tm.RotondAndesTM;
 import vos.ListaProductos;
+import vos.ListaRentabilidad;
 
 
 
@@ -43,6 +45,7 @@ public class RotondAndesDistributed
 	private TopicConnectionFactory factory;
 	
 	private ProductoMDB productoMQ;
+	private RentabilidadMDB rentabilidadMQ;
 	
 	private static String path;
 
@@ -121,4 +124,16 @@ public class RotondAndesDistributed
 	{
 		return productoMQ.getRemoteProductos();
 	}
+	
+	public ListaRentabilidad getLocalRentabilidad() throws Exception
+	{
+		return new ListaRentabilidad(tm.darRentabilidadLocal());
+		 
+	}
+	
+	public ListaRentabilidad getRemoteRentabilidad() throws JsonGenerationException, JsonMappingException, JMSException, IOException, NonReplyException, InterruptedException, NoSuchAlgorithmException
+	{
+		return rentabilidadMQ.getRemoteRentabilidad();
+	}
+	
 }
