@@ -125,9 +125,9 @@ public class RotondAndesDistributed
 		return productoMQ.getRemoteProductos();
 	}
 	
-	public ListaRentabilidad getLocalRentabilidad() throws Exception
+	public ListaRentabilidad getLocalRentabilidad(String fecha1,String fecha2,String restaurante) throws Exception
 	{
-		return new ListaRentabilidad(tm.darRentabilidadLocal());
+		return new ListaRentabilidad(tm.darRentabilidadLocal(fecha1,fecha2, restaurante));
 		 
 	}
 	
